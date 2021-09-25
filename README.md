@@ -40,10 +40,20 @@ pip install -r requirments.txt
 6. Prepare the deployment package for aws.
 Readme: https://docs.aws.amazon.com/lambda/latest/dg/python-package.html
 
-cd myvenv/lib/python3.8/site-packages
-zip -r ../../../../my-deployment-package.zip .
+In aws documentation they specify that you have to deactivate the venv.
 
+```
+deactivate
+```
+
+
+```
+cd venv/lib/python3.7/site-packages
+zip -r ../../../../my-deployment-package.zip .
+```
 
 7. Deploy and Update: (whenever you do code updates)
+```
 zip -g my-deployment-package.zip lambda_function.py
 aws lambda update-function-code --function-name BikeCheck --zip-file fileb://my-deployment-package.zip
+```

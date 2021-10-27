@@ -3,4 +3,3 @@ venv/
 .vscode
 __pycache__/
 app/variables.py
-my-deployment-package.zip

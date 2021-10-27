@@ -51,7 +51,7 @@ cd venv/lib/python3.7/site-packages
 zip -r ../../../../my-deployment-package.zip .
 ```
 
-7. Deploy and Update: (whenever you do code updates)
+7. Deploy and Update: (whenever you update the code)
 ```
 zip -g my-deployment-package.zip app/__init__.py app/lambda_function.py app/variables.py
 aws lambda update-function-code --function-name BikeCheckExample --zip-file fileb://my-deployment-package.zip

@@ -4,7 +4,9 @@
 Prerequisites:
 
 1. Install python locally (ex: 3.7.3).
-2. Create a Lambda function on AWS (choose python). Name will used in step 7.
+2. Create a Lambda function on AWS.
+   Choose python 3.7 as Runtime and choose 'app.lambda_function.lambda_handler' as handler.
+   Remember the name of your lambda, it will used in step 7.
 3. Create an event rule on AWS EventBridge as trigger. Ex of event schedule: cron(0/2 6-23 ? * * *)
 4. Create a variables.py file. Take variables_example.py as example. 
 

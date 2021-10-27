@@ -2,3 +2,4 @@ venv/
 *.zip
 .vscode
 __pycache__/
+variables.py

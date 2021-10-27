@@ -2,4 +2,5 @@ venv/
 *.zip
 .vscode
 __pycache__/
-variables.py
+app/variables.py
+my-deployment-package.zip

@@ -3,10 +3,11 @@
 
 Prerequisites:
 
-1. Install python locally ( 3.7.3 ).
-2. Create a Lambda function on AWS (choose python). (name to be used in step 7)
-3. Create an event rule on AWS EventBridge as trigger.
- Ex of event schedule: cron(0/2 6-23 ? * * *)
+1. Install python locally (ex: 3.7.3).
+2. Create a Lambda function on AWS (choose python). Name will used in step 7.
+3. Create an event rule on AWS EventBridge as trigger. Ex of event schedule: cron(0/2 6-23 ? * * *)
+4. Create a variables.py file. Take variables_example.py as example. 
+
 
 Steps:
 
@@ -41,11 +42,9 @@ pip install -r requirments.txt
 Readme: https://docs.aws.amazon.com/lambda/latest/dg/python-package.html
 
 In aws documentation they specify that you have to deactivate the venv.
-
 ```
 deactivate
 ```
-
 
 ```
 cd venv/lib/python3.7/site-packages
@@ -54,6 +53,6 @@ zip -r ../../../../my-deployment-package.zip .
 
 7. Deploy and Update: (whenever you do code updates)
 ```
-zip -g my-deployment-package.zip lambda_function.py
-aws lambda update-function-code --function-name BikeCheck --zip-file fileb://my-deployment-package.zip
+zip -g my-deployment-package.zip app/__init__.py app/lambda_function.py app/variables.py
+aws lambda update-function-code --function-name BikeCheckExample --zip-file fileb://my-deployment-package.zip
 ```

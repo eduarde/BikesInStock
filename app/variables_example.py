@@ -46,3 +46,5 @@ OUTLET_PAGE_LIST = [
 OUTLET_BIKES = ['Grail']
 # Full name of the bike you wish to ignore.
 OUTLET_BIKES_TO_IGNORE = []
+
+AVAILABLE_STATUS = ['In stock', 'Delivery']
